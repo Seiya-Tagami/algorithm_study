@@ -16,9 +16,9 @@ fn bubble_sort(a: &mut Vec<i32>) -> (i32, i32) {
     let mut swap_count: i32 = 0;
 
     let n = a.len();
-    // 最適化１、n - 1で再び同じ数を比較しないようにする
     for i in 0..n - 1 { 
         let mut swapped = false;
+        // 最適化１、n - i - 1で再び同じ数を比較しないようにする
         for j in 0..n - i - 1 {
             if a[j] > a[j + 1] {
                 a.swap(j, j + 1);
