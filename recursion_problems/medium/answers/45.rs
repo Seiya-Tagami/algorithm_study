@@ -1,11 +1,11 @@
 fn main() {
-  let answer: f64 = split_and_add(18.0);
+  let answer: i64 = split_and_add(18);
   println!("{}", answer);
 }
 
-fn split_and_add(digits: f64) -> f64 {
-  if digits < 10.0 {
+fn split_and_add(digits: i64) -> i64 {
+  if digits < 10 {
       return digits;
   }
-  return (digits % 10.0) + split_and_add((digits / 10.0).floor())
+  return (digits % 10) + split_and_add(digits / 10);
 }
